@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #862d86;
+  --button-hover-color: #8b378b;
+  --button-click-color: #812f81;
+  --focus-color: #8833888d;
+}
+
+@layer components{
+  .input-login{
+    @apply p-3 placeholder:text-[16px] rounded-md focus:outline-focus-color shadow-sm
+  }
+
+  .button{
+    @apply p-2 rounded-md bg-primary-color text-white text-lg font-semibold hover:bg-button-hover-color active:bg-button-click-color
+  }
+}
